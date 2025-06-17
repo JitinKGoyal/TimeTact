@@ -7,6 +7,9 @@ import type { Session } from "next-auth";
 import { format } from "date-fns";
 import { Utilization } from "@prisma/client";
 
+// Force dynamic rendering for this route
+export const dynamic = 'force-dynamic';
+
 const timeLogSchema = z.object({
     date: z.string().min(1),
     startTime: z.string().min(1),
